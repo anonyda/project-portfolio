@@ -24,6 +24,8 @@ body{
     background-color: black;
     color: white;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 
 }
 h1, h2, h3{
@@ -110,12 +112,13 @@ header{
 main{
     width: 100vw;
     text-align: center;
-    display: inline-block;
-    margin: 0 auto;
-    padding-top: 4rem;
-    color: orange;
+    
 
     h1{
+        display: inline-block;
+        margin: 0 auto;
+        padding-top: 4rem;
+        color: orange;
         text-transform: uppercase;
         letter-spacing: 0.4rem;
     }
@@ -181,7 +184,7 @@ main{
 
 footer{
     border: 0.1px solid black;
-    // height: 100%;
+    // position: absolute;
     background-color: #080500;
     .footer-container{
         display: flex;
@@ -212,3 +215,91 @@ footer{
         }
     }
 }
+
+@media (max-width : 768px) {
+    main{
+        .projects{
+           
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+
+            div{
+                border-bottom: 2px dotted orange;
+                border-right: none;
+
+                &:nth-child(2n){
+                    border-left: 2px dotted orange;
+                }
+
+                &:nth-last-child(-n+3){
+                    border-bottom: 2px dotted orange;
+                }
+
+                &:nth-last-child(-n+2){
+                    border-bottom: none;
+                }
+
+                div{
+                    &:nth-child(2n){
+                        border-left: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    main{
+        .projects{
+            display: flex;
+            row-gap: 1rem;
+            flex-direction: column;
+            height: auto;
+
+            div{
+                border: 2px dotted orange;
+                padding: 1.5rem 0;
+                &:nth-last-child(-n+2){
+                    border-bottom: 2px dotted orange;                    ;
+                }
+
+                &:nth-child(3n){
+                    border-right: 2px dotted orange;
+                }
+
+                div{
+                    &:nth-child(2n){
+                        border-left: none;
+                    }
+
+                    &:nth-last-child(-n+2){
+                        border-bottom: none;                    ;
+                    }
+                }
+
+            }
+        }
+    }
+
+    footer{
+
+        .footer-container{
+            flex-direction: column;
+        }
+        
+    }
+
+   
+}
+
+// @media (max-width: 768px) {
+//     main{
+//         border: 1px solid red;
+//         .projects{
+           
+//             grid-template-columns: repeat(2, 1fr);
+//             grid-template-rows: repeat(6, 1fr);
+//         }
+//     }
+// }
