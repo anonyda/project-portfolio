@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  .container {
+    border: 2px solid black;
+    width: 80%;
+    margin: 100px auto;
+    padding: 10px;
+  }
+  p {
+    border: 1px solid red;
+    padding: 50px;
+    text-align: justify;
+    margin: 20px;
+  }
+  span {
+    display: inline-block;
+    border: 2px solid blue;
+    padding: 0px 30px;
+    /* padding-top: 10px; */
+    margin: 0px 10px;
+    margin-top: 20px;
+  }

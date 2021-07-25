@@ -1,0 +1,108 @@
+@import "variables";
+@import "mixins";
+
+@mixin rounderBorder {
+    border-radius: 40px;    
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.navigation{
+    @include flex-row;
+    background-color: #3f0b15;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 15%;
+    min-width: 200px;
+
+    img{
+        width: 100%;
+    }
+}
+
+.nav-container{
+    width: 60%;
+    @include flex-placement(row, flex-end, center);
+    // justify-content: flex-end;
+
+    li{
+        margin-left: 20px;
+        list-style: none;
+        a{
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: $primaryColor;
+
+        }
+    }
+
+    :last-child{
+        a{
+            margin-right: 20px;
+        }
+    }
+
+    @media (max-width: 576px){
+        display: none;
+    }
+
+}
+
+// .nav-item{
+//     margin-left: 20px;
+//     list-style: none;
+// }
+
+// .nav-item a{
+//     text-decoration: none;
+//     font-size: 1.5rem;
+// }
+
+// .nav-container :last-child a{
+    
+// }
+
+.menu{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 576px){
+        display: unset;
+    }
+}
+
+// .menu img{
+//     width: 100%;
+//     height: 100%;
+// }
+
+.box{
+    @include rounderBorder;
+    background-color: $primaryColor;
+    width: 100px;
+    height: 40px;
+}
+
+// @media (max-width: 576px) { 
+//     .nav-container{
+//         display: none;
+//     }
+
+//     .menu{
+//         display: unset;
+//     }
+//  }

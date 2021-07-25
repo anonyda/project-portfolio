@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .box{
+            border: 2px solid red
+        }
+    </style>
+</head>
+<body>
+    <h2>Spotthe Difference!</h2>
+    <p>There are three differences per picture. Look carefully.</p>
+    <ol>
+        <li><a href="#image1">First Image</a></li>
+        <li><a href="#image2">Second Image</a></li>
+        <li><a href="#image3">Third Image</a></li>
+    </ol>
+    <hr />
+    <div id="image1">
+        <img src="./images/1.jpg" usemap="#image_map1">
+        <map name="image_map1">
+            <area id="image1-difference1" coords="597,111,23" shape="circle" onclick="foundDifference(event)">
+            <area id="image1-difference2" coords="686,275,21" shape="circle" onclick="foundDifference(this.id)">
+            <area id="image1-difference3" coords="594,425,14" shape="circle" onclick="foundDifference(this.id)">
+        </map>
+    </div>
+    <br />
+    <div id="image2">
+        <img src="./images/2.jpg" usemap="#image_map2">
+        <map name="image_map2">
+            <area id="image2-difference1" coords="539,231,16" shape="circle" onclick="foundDifference(this.id)">
+            <area id="image2-difference2" coords="608,377 615,359 625,346 644,338 665,333 683,336 700,347 705,359 693,362 682,360 674,371 660,364 645,364 629,367 611,378 609,378 " shape="polygon" onclick="foundDifference(this.id)">
+            <area id="image2-difference3" coords="487,96,15" shape="circle" onclick="foundDifference(this.id)">
+        </map>
+    </div>
+    <br />
+    <div id="image3">
+        <img src="./images/3.jpg" usemap="#image_map3">
+        <map name="image_map3">
+            <area id="image3-difference1" coords="420,300 420,300 420,300 " shape="polygon" onclick="foundDifference(this.id)">
+            <area id="image3-difference2" coords="547,43 557,32 561,63 550,72 547,43 " shape="polygon" onclick="foundDifference(this.id)">
+            <area id="image3-difference3" coords="590,364 629,347 644,382 606,401 " shape="polygon" onclick="foundDifference(this.id)">
+            <area id="image3-difference4" coords="419,283 431,280 437,298 413,328 416,359 404,368 404,368 399,332 418,299 " shape="polygon" onclick="foundDifference(this.id)">
+        </map>
+    </div>
+    <script>
+        // function foundDifference(id){
+        //     console.log(id.target)
+        //     console.log(`Found ${id}`)
+        // }
+        
+        function foundDifference(event){
+            console.log(event.target.id)
+            event.target.classList.add("box")
+        }
+    </script> 
+</body>
+</html>

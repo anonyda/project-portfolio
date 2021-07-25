@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background-color: black;
+    animation-name: makeCircle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes makeCircle {
+    0%{
+        background-color: cornflowerblue;
+    }
+    50%{
+        border-radius: 25%;
+    }
+    100%{
+        border-radius: 50%;
+    }
+    
+}

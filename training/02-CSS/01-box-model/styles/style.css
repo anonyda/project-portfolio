@@ -1,0 +1,16 @@
+
+
+.box{
+    border: brown 2px solid;
+    width: 30%;
+    height: 50px;
+}
+
+.extra-margin{
+    margin: 30px;
+}
+
+.extra-padding{
+    padding: 30px;
+}
+

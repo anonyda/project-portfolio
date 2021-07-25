@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-top: 3rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: black;
+  box-shadow: 0px 8px 24px -3px rgba(244, 162, 97, 0.48);
+  -webkit-box-shadow: 0px 8px 24px -3px rgba(244, 162, 97, 0.48);
+  -moz-box-shadow: 0px 8px 24px -3px rgba(244, 162, 97, 0.48);
+}
+
+header .nav {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav__logo {
+  margin: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  overflow-y: hidden;
+}
+
+header .nav__logo img {
+  width: 100%;
+}
+
+header .nav__list {
+  display: flex;
+}
+
+header .nav__item {
+  margin: 1.5rem;
+}
+
+header .nav__link {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+}
+
+header .nav__link:hover {
+  color: orange;
+}
+
+main {
+  width: 100vw;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 4rem;
+  color: orange;
+}
+
+main h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+main .projects {
+  color: white;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin: 1rem 5rem;
+}
+
+main .projects div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 0.8px dotted orange;
+  border-right: 0.8px dotted orange;
+}
+
+main .projects div:nth-child(3n) {
+  border-right: none;
+}
+
+main .projects div:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+main .projects div div {
+  flex-direction: row;
+  justify-self: flex-end;
+  border: none;
+}
+
+main .projects div div .button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid white;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+main .projects div div .button:hover {
+  color: orange;
+  background-color: #FFFFFF;
+}
+
+footer {
+  border: 0.1px solid black;
+  background-color: #080500;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 3.5rem;
+  font-size: 1.2rem;
+}
+
+footer .footer-container .social-links ul {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 3rem;
+}
+
+footer .footer-container .social-links ul i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+footer .footer-container .social-links ul i:hover {
+  color: orange;
+}
+/*# sourceMappingURL=style.css.map */
